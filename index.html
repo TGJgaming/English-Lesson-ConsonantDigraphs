@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consonant Digraphs for Grade 2</title>
+    <style>
+        /* Kid-friendly, colorful styling */
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .deck-container {
+            width: 90%;
+            max-width: 800px;
+            height: 600px;
+            background: #ffffff;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            position: relative;
+            border: 8px solid #ffb300;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slide-content {
+            flex-grow: 1;
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            padding: 40px;
+            box-sizing: border-box;
+            text-align: center;
+            animation: bounceIn 0.6s ease;
+        }
+
+        .active {
+            display: block;
+        }
+
+        h1 {
+            color: #ff3366;
+            font-size: 3em;
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #0099cc;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.8em;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .highlight {
+            color: #ff3366;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .visual {
+            font-size: 5em;
+            margin: 10px 0;
+        }
+
+        /* Bottom Controls */
+        .controls {
+            height: 80px;
+            background-color: #fff9c4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            border-top: 4px solid #ffb300;
+        }
+
+        button.nav-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 6px 0 #2e8b57;
+            transition: all 0.1s;
+        }
+
+        button.nav-btn:active {
+            transform: translateY(6px);
+            box-shadow: none;
+        }
+
+        button.nav-btn.hidden {
+            visibility: hidden;
+        }
+
+        /* Quiz Styling */
+        .quiz-box {
+            background-color: #f3e5f5;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 3px dashed #ab47bc;
+        }
+
+        .quiz-word {
+            font-size: 2.5em;
+            font-weight: bold;
+            letter-spacing: 5px;
+            color: #4a148c;
+            margin: 20px 0;
+        }
+
+        .quiz-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .quiz-btn {
+            background-color: #29b6f6;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.8em;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 6px 0 #0288d1;
+        }
+
+        .quiz-btn:active {
+            transform: translateY(6px);
+            box-shadow: none;
+        }
+
+        .feedback {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            height: 35px;
+        }
+
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="deck-container">
+        
+        <div class="slide-content">
+            <!-- Slide 1: Title -->
+            <div class="slide active">
+                <h1>Welcome to Consonant Digraphs!</h1>
+                <div class="visual">🔤✨</div>
+                <p>Hello Grade 2! Today we will learn about magic letter friends.</p>
+                <p>Click "Next" to begin!</p>
+            </div>
+
+            <!-- Slide 2: Definition -->
+            <div class="slide">
+                <h2>What is a Digraph?</h2>
+                <div class="visual">🤝</div>
+                <p>A digraph is when <strong>TWO</strong> consonant letters stand together to make <strong>ONE</strong> new sound!</p>
+                <p><span class="highlight">S + H = SH</span></p>
+                <p>Let's meet our new letter friends!</p>
+            </div>
+
+            <!-- Slide 3: SH -->
+            <div class="slide">
+                <h2>The 'SH' Sound</h2>
+                <p>Put your finger on your lips and say "Shhh!"</p>
+                <div class="visual">👟 🚢 🐟</div>
+                <p>
+                    <span class="highlight">sh</span>oes<br>
+                    <span class="highlight">sh</span>ip<br>
+                    fi<span class="highlight">sh</span>
+                </p>
+            </div>
+
+            <!-- Slide 4: CH -->
+            <div class="slide">
+                <h2>The 'CH' Sound</h2>
+                <p>Like a moving train! "Choo-choo!"</p>
+                <div class="visual">🪑 🧀 🍫</div>
+                <p>
+                    <span class="highlight">ch</span>air (Silya)<br>
+                    <span class="highlight">ch</span>eese (Keso)<br>
+                    <span class="highlight">ch</span>ocolate
+                </p>
+            </div>
+
+            <!-- Slide 5: TH -->
+            <div class="slide">
+                <h2>The 'TH' Sound</h2>
+                <p>Put your tongue between your teeth!</p>
+                <div class="visual">3️⃣ 👍 🦷</div>
+                <p>
+                    <span class="highlight">th</span>ree (Tatlo)<br>
+                    <span class="highlight">th</span>umb<br>
+                    too<span class="highlight">th</span> (Ngipin)
+                </p>
+            </div>
+
+            <!-- Slide 6: PH and WH -->
+            <div class="slide">
+                <h2>The 'PH' and 'WH' Sounds</h2>
+                <p><strong>PH</strong> sounds like "F". <strong>WH</strong> sounds like "W".</p>
+                <div class="visual">📱 🐳</div>
+                <p>
+                    <span class="highlight">ph</span>one<br>
+                    <span class="highlight">wh</span>ale (Balyena)
+                </p>
+            </div>
+
+            <!-- Slide 7: Quiz Intro -->
+            <div class="slide">
+                <h1>Quiz Time! 🌟</h1>
+                <div class="visual">🎮</div>
+                <p>Let's play a game! Guess the missing letters to complete the word.</p>
+                <p>Are you ready?</p>
+            </div>
+
+            <!-- Slide 8: Quiz 1 -->
+            <div class="slide">
+                <h2>Question 1</h2>
+                <div class="quiz-box">
+                    <p>We wear these on our feet:</p>
+                    <div class="quiz-word">_ _ O E S</div>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="checkAnswer('q1', false)">CH</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q1', true)">SH</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q1', false)">TH</button>
+                    </div>
+                    <div id="feedback-q1" class="feedback"></div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Quiz 2 -->
+            <div class="slide">
+                <h2>Question 2</h2>
+                <div class="quiz-box">
+                    <p>You sit on this in the classroom:</p>
+                    <div class="quiz-word">_ _ A I R</div>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="checkAnswer('q2', true)">CH</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q2', false)">PH</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q2', false)">WH</button>
+                    </div>
+                    <div id="feedback-q2" class="feedback"></div>
+                </div>
+            </div>
+
+            <!-- Slide 10: Quiz 3 -->
+            <div class="slide">
+                <h2>Question 3</h2>
+                <div class="quiz-box">
+                    <p>The number after two (2) is:</p>
+                    <div class="quiz-word">_ _ R E E</div>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="checkAnswer('q3', false)">SH</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q3', false)">CH</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q3', true)">TH</button>
+                    </div>
+                    <div id="feedback-q3" class="feedback"></div>
+                </div>
+            </div>
+
+            <!-- Slide 11: Quiz 4 -->
+            <div class="slide">
+                <h2>Question 4</h2>
+                <div class="quiz-box">
+                    <p>A big animal that lives in the ocean:</p>
+                    <div class="quiz-word">_ _ A L E</div>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="checkAnswer('q4', true)">WH</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q4', false)">PH</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q4', false)">TH</button>
+                    </div>
+                    <div id="feedback-q4" class="feedback"></div>
+                </div>
+            </div>
+
+            <!-- Slide 12: End -->
+            <div class="slide">
+                <h1>Congratulations! 🎉</h1>
+                <div class="visual">🏆🥇</div>
+                <p>You are now a <strong>Digraph Master</strong>!</p>
+                <p>Great job practicing your English today!</p>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="prevBtn" class="nav-btn hidden" onclick="changeSlide(-1)">◀ Back</button>
+            <button id="nextBtn" class="nav-btn" onclick="changeSlide(1)">Next ▶</button>
+        </div>
+
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function updateButtons() {
+            if (currentSlide === 0) {
+                prevBtn.classList.add('hidden');
+            } else {
+                prevBtn.classList.remove('hidden');
+            }
+
+            if (currentSlide === slides.length - 1) {
+                nextBtn.classList.add('hidden');
+            } else {
+                nextBtn.classList.remove('hidden');
+            }
+        }
+
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            
+            // Clear any old quiz feedback when changing slides
+            const feedbacks = document.querySelectorAll('.feedback');
+            feedbacks.forEach(fb => fb.innerText = '');
+
+            currentSlide += direction;
+            slides[currentSlide].classList.add('active');
+            updateButtons();
+        }
+
+        function checkAnswer(questionId, isCorrect) {
+            const feedbackEl = document.getElementById('feedback-' + questionId);
+            if (isCorrect) {
+                feedbackEl.style.color = '#4CAF50';
+                feedbackEl.innerText = '⭐ Tama! (Correct!) Excellent job! ⭐';
+            } else {
+                feedbackEl.style.color = '#ff3366';
+                feedbackEl.innerText = 'Oops! Mali. Try again! ❌';
+            }
+        }
+    </script>
+</body>
+</html>
